@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>My CV</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital@1&family=Source+Serif+Pro:wght@600&display=swap');
+        </style>
+        <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">CV</a></h1>
+        </div>
+        {% for CVSection in CVSections %}
+            <h2>{{ CVSection.title }}</h2>
+            <p>{{ CVSection.text|linebreaks }}</p>
+            {% for CVSubsection in CVSection.subsections.all %}
+                <h3>{{ CVSubsection.title }}</h3>
+                <p>{{ CVSubsection.text|linebreaks }}</p>
+            {% endfor %}
+        {% endfor %}
+    </body>
+</html>

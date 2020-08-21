@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital@1&family=Source+Serif+Pro:wght@600&display=swap');
+        </style>
+        <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Welcome to my Site!</a></h1>
+        </div>
+        <h2><a id="cv_link", href="/cv">Take a look at my cv</a></h2>
+        <h2><a id="blog_link", href="/blog">Read my blog</a></h2>
+    </body>
+</html>
